@@ -16,17 +16,13 @@ dependencies {
             "org.slf4j:slf4j-simple:1.7.29")
 }
 
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}
-
-test {
+tasks.withType(Test) {
     useJUnitPlatform()
-}
 
-testLogging {
-    lifesycle {
-        events "started","skipped","failed","standard_error","standard_out"
-        exceptionFormat "short"
+    testLogging {
+        lifesycle {
+            events "started","skipped","failed","standard_error","standard_out"
+            exceptionFormat "short"
+        }
     }
 }
