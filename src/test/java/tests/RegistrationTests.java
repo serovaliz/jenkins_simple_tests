@@ -1,4 +1,4 @@
-package UITests;
+package tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
@@ -35,7 +35,7 @@ public class RegistrationTests {
         $(".react-datepicker__day--030:not(.react-datepicker__day--outside-month)").click();
         $("#subjectsInput").setValue("Math").pressEnter();
         executeJavaScript("arguments[0].click();", $("#hobbiesWrapper").$(byText("Sports")));
-        $("#uploadPicture").uploadFromClasspath("img/1.png");
+        $("#uploadPicture").uploadFromClasspath("niL25B_U0dp0XYfPL9PGX_KW2owUdihzD49355BCH-uiAJCTPXZfebRgwHn7K8Z4CvQBT_D6dweCmROZTZAJqGwu.jpg");
         $("#currentAddress").setValue("Some address 1");
         $("#state").scrollIntoView(true);
         $("#react-select-3-input").setValue("NCR").pressEnter();
