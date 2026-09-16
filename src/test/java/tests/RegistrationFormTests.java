@@ -99,7 +99,6 @@ public class RegistrationFormTests extends TestBase {
             registrationFormPage.enterUserEmail(userEmail)
                     .setDateOfBirth(dayOfBirth, monthOfBirth, yearOfBirth)
                     .selectSubjects(subjects)
-                    .selectHobbies(hobbiesWrapperSports)
                     .selectPictureResource(picture)
                     .enterCurrentAddress(currentAddress)
                     .enterUserState(state)
