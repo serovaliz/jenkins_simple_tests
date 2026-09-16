@@ -44,7 +44,8 @@ public class TestBase {
         Configuration.remote = System.getProperty("selenoidAddress");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.baseUrl = System.getProperty("baseUrl");
-        String headless = System.getProperty("headless", "false");
+        Configuration.headless = true;
+
 
 
 //        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
