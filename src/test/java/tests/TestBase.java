@@ -25,9 +25,8 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.browser = "chrome";
-        Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://demoqa.com";
+
+
         Configuration.timeout = 10000; // default 4000
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -39,7 +38,19 @@ public class TestBase {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion");
+        Configuration.remote = System.getProperty("selenoidAddress");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
+        Configuration.baseUrl = System.getProperty("baseUrl");
+        String headless = System.getProperty("headless", "false");
+
+
+//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+//        Configuration.browser = "chrome";
+//        Configuration.browserSize = "1920x1080";
+
 
     }
 
