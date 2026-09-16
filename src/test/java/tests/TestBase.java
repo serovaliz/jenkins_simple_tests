@@ -44,7 +44,7 @@ public class TestBase {
         Configuration.remote = System.getProperty("selenoidAddress");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.baseUrl = System.getProperty("baseUrl");
-        Configuration.headless = true;
+        Configuration.headless = Boolean.parseBoolean(System.getProperty("headless", "false"));
 
 
 
