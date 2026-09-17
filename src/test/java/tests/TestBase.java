@@ -39,18 +39,20 @@ public class TestBase {
         ));
         Configuration.browserCapabilities = capabilities;
 
-        Configuration.browser = System.getProperty("browser", "chrome");
+/*        Configuration.browser = System.getProperty("browser", "chrome");
         Configuration.browserVersion = System.getProperty("browserVersion");
         Configuration.remote = System.getProperty("selenoidAddress");
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.baseUrl = System.getProperty("baseUrl");
-        Configuration.headless = Boolean.parseBoolean(System.getProperty("headless", "false"));
+        Configuration.headless = Boolean.parseBoolean(System.getProperty("headless", "true"));*/
 
 
 
-//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
-//        Configuration.browser = "chrome";
-//        Configuration.browserSize = "1920x1080";
+    //    Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.browser = "chrome";
+        Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.headless = false;
 
 
     }
